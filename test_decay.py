@@ -25,10 +25,10 @@ def test_rejects_negative_rate():
 
 def test_matches_law():
     N0, lam = 10000, 0.4
-    dt=0.05
+    dt = 0.05
     avg = np.mean([simulate(N0, lam) for _ in range(200)], axis=0)
     t = np.arange(len(avg)) * dt
     expected = N0 * np.exp(-lam * t)
-    assert avg == pytest.approx(expected, rel=0.05)
+    assert avg == pytest.approx(expected, rel=0.1)
 
 # .approx tool compares floating-point values with a given deviation

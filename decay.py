@@ -13,7 +13,8 @@ Both return an array of the atom count at each time step.
 """
 
 import numpy as np
-
+import pytest
+import decay
 
 def simulate_loop(N0, lam, dt=0.05, steps=200, seed=0):
     """Radioactive decay, pure-Python loop version (slow)."""
