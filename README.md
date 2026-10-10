@@ -72,33 +72,38 @@ although results might look acceptable, even little noise in the source data can
 
 
 **Report and discussion** 
+
 part 2:
-    A:
-    all three methods worked well, even though gradient descent was a tiny bit off (2.9999963220107015), but this is an issue of the set desired error in a big way. both newton and slsqp both gave 3.0. this function has only one local extremum, so every method falls into it eventually.
+A:
+all three methods worked well, even though gradient descent was a tiny bit off (2.9999963220107015), but this is an issue of the set desired error in a big way. both newton and slsqp both gave 3.0. this function has only one local extremum, so every method falls into it eventually.
 
-    B:
-    a) x0=0
-       gradient descent: -1.3008343693148827
-       newton: 0.16993844331159128, d2g=-5.653451105817997 - a minimum
-       slsqp: -1.3006394477423422
-       on this one gradient descent and slsqp agree
+B:
+a) x0=0
+   gradient descent: -1.3008343693148827
+   newton: 0.16993844331159128, d2g=-5.653451105817997 - a minimum
+   slsqp: -1.3006394477423422
+   on this one gradient descent and slsqp agree
 
-    b) x0=2
-       gradient descent: 1.1309102497941645
-       newton: 1.1309011226299859, d2g=9.347248189989148 - a maximum
-       slsqp: -1.3006394477423422
-       on this one gradient descent and newton agree
+b) x0=2
+   gradient descent: 1.1309102497941645
+   newton: 1.1309011226299859, d2g=9.347248189989148 - a maximum
+   slsqp: -1.3006394477423422
+   on this one gradient descent and newton agree
 
-    the function has several stationary points, and from different starting points gradient descent and newton methods gave different results. however, the slsqp method turned out to be stable.
+   the function has several stationary points, and from different starting points gradient descent and newton methods gave different results. however, the slsqp method turned out to be stable.
+
 
 part 3:
     fitted k = 0.2617613705507395
+
 
 part 4:
     equilibrium extent (newton): 0.6638476669609822
     equilibrium extent (SLSQP): 0.6638474284044567
 
+
 part 5 (bonus):
     equivalence point: 50.00 mL
+
 **Conclusion:**
 some methods are sometimes better than others in a particular condition and none is universal
